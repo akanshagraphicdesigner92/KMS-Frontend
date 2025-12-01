@@ -3,7 +3,7 @@ import Topbar from './Components/Topbar';
 import Sidebar from './Components/Sidebar';
 import MainContent from './Components/MainContent';
 import Footer from './Components/Footer';
-import RightSidebar from "./Components/RightSidebar";
+import RightSidebar from "./Components/RightSidebar"; 
 
 
 function App() {
