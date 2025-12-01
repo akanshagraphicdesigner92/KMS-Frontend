@@ -8,7 +8,7 @@ import RightSidebar from "./Components/RightSidebar";
 
 function App() {
   return (
-    <div className="app-container d-flex flex-column" style={{ minHeight: '100vh' }}>
+    <div className="app-container d-flex flex-column" style={{ minHeight: '101vh' }}>
       <Topbar />
       <div className="flex-grow-1 d-flex overflow-hidden main-container">
         <Sidebar />
