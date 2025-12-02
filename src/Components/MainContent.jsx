@@ -56,7 +56,7 @@ export default function MainContent() {
         </div>
 
         {/* 🔽 SCROLLABLE NOTICE LIST */}
-        <div className="scroll-area flex-grow-1 overflow-auto">
+        <div className="scroll-area flex-grow-1 overflow-auto" tabIndex="0">
           <NoticeCard />
           <NoticeCard />
           <NoticeCard />

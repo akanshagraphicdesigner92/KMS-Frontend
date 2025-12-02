@@ -1,7 +1,9 @@
 import React from "react";
-import logo from "../Assets/logo.svg";
+
+import logo from "../Assets/logo1.svg";
 import Department_logo from "../Assets/Department_logo.svg";
-import skiptocontent1 from "../Assets/skip to content 1.svg";
+
+import skipToContent from "../Assets/skip to content 1.svg";
 import Accessibility from "../Assets/Accessibility.svg";
 import site_map1 from "../Assets/site_map1.svg";
 import help from "../Assets/help.svg";
@@ -10,73 +12,76 @@ import log_out from "../Assets/log_out.svg";
 
 export default function Topbar() {
   return (
-    <header className="topbar">
-      {/* ROW 1 — Normal Flex Row */}
-      <div className="d-flex flex-row ">
+    <header className="app-header d-flex pt-2">
+      <div className="header-content-area d-md-flex flex-grow-1">
+
         {/* LEFT LOGO */}
-        <div className="p-2  d-flex flex-grow-1  ">
-          <img src={logo} alt="logo" className="left-logo" />
+        <div className="d-flex align-items-center justify-content-center">
+          <a href="/" aria-label="eOffice logo">
+            <img className="img-fluid" alt="eOffice logo" src={logo} />
+          </a>
         </div>
 
-        {/* TITLE MIDDLE */}
-        <div className="p-2  d-flex align-items-center">
-          <img
-            src={Department_logo}
-            alt="department_logo"
-            className="dept-logo"
-          />
-          <h5 className="kms-text mb-0 ms-2 text-white">
-            Knowledge Management System
-          </h5>
+        {/* RIGHT SIDE CONTENT */}
+        <div className="profile_details navbar py-0 ms-auto d-flex align-items-center flex-nowrap">
+          <div className="py-2 d-flex flex-md-column flex-grow-1">
+
+            {/* GOVERNMENT TEXT */}
+            <div className="right-head-content pe-3 text-end justify-content-end d-md-flex d-none text-white">
+              National Informatics Center <br />
+              Government of India
+            </div>
+
+            {/* TOP ICON MENU */}
+            <div className="d-flex flex-grow-1 pt-md-2 justify-content-center font-nav text-white pe-2">
+              <ul className="d-flex quick-links-nav mb-0 ps-0 align-items-center">
+
+                {/* SKIP TO CONTENT */}
+                <li className="p-2">
+                  <img src={skipToContent} className="top-icon" alt="Skip to content" />
+                </li>
+
+                <li className="fs-5 text-white px-1">|</li>
+
+                {/* ACCESSIBILITY */}
+                <li className="p-2">
+                  <img src={Accessibility} className="top-icon" alt="Accessibility" />
+                </li>
+
+                <li className="fs-5 text-white px-1">|</li>
+
+                {/* SITE MAP */}
+                <li className="p-2">
+                  <img src={site_map1} className="top-icon" alt="Site Map" />
+                </li>
+
+                <li className="fs-5 text-white px-1">|</li>
+
+                {/* HELP */}
+                <li className="p-2">
+                  <img src={help} className="top-icon" alt="Help" />
+                </li>
+
+                <li className="fs-5 text-white px-1">|</li>
+
+                {/* LANGUAGE */}
+                <li className="p-2">
+                  <img src={language} className="top-icon" alt="Language" />
+                </li>
+
+                <li className="fs-5 text-white px-1">|</li>
+
+                {/* LOGOUT */}
+                <li className="p-2">
+                  <img src={log_out} className="top-icon" alt="Log out" />
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
         </div>
-      </div>
 
-      {/* ROW 2 — NORMAL LEFT-TO-RIGHT ORDER */}
-      <div className="d-flex align-items-center d-flex justify-content-end">
-        {/* SKIP TO CONTENT */}
-        <div className="p-2 ">
-          <img src={skiptocontent1} className="top-icon" alt="" />
-        </div>
-
-        {/* SEPARATOR */}
-        <div className=" text-white fs-5">|</div>
-
-        {/* ACCESSIBILITY */}
-        <div className="p-2 ">
-          <img src={Accessibility} className="top-icon" alt="" />
-        </div>
-
-        {/* SEPARATOR */}
-        <div className=" text-white fs-5">|</div>
-
-        {/* SITE MAP */}
-        <div className="p-2 ">
-          <img src={site_map1} className="top-icon" alt="" />
-        </div>
-
-        {/* SEPARATOR */}
-        <div className="  text-white fs-5">|</div>
-
-        {/* HELP */}
-        <div className="">
-          <img src={help} className="top-icon" alt="" />
-        </div>
-
-        {/* SEPARATOR */}
-        <div className=" text-white fs-5">|</div>
-
-        {/* LANGUAGE */}
-        <div className="p-2 ">
-          <img src={language} className="top-icon" alt="" />
-        </div>
-
-        {/* SEPARATOR */}
-        <div className="  text-white fs-5">|</div>
-
-        {/* LOGOUT */}
-        <div className="p-2 ">
-          <img src={log_out} className="top-icon" alt="" />
-        </div>
       </div>
     </header>
   );
