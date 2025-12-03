@@ -36,6 +36,7 @@ export default function Sidebar() {
       </div>
 
       {/* ONLY THIS SECTION WILL SCROLL */}
+      
       <div className="Counts scroll-counts center-align-items" tabindex="0">
         <div className="status-card blue">
           <i className="pi pi-clock"></i>

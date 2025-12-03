@@ -300,6 +300,40 @@ code {
   color: #6b7280;
 }
 
+.notice-right {
+  gap: 4px; /* space between date & user block */
+}
+
+.notice-date {
+  font-size: 14px;
+  color: #2c313a;
+  
+}
+
+.notice-user-wrapper {
+  gap: 3px; /* space between name & image */
+}
+
+.notice-name {
+  font-size: 12px;
+  padding: 1px 4px;
+ 
+  border-radius: 4px;
+}
+
+.notice-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  margin-top: 6px;
+}
+
+
+
+
+
 .tags {
   display: flex;
   gap: 8px;
@@ -319,25 +353,7 @@ code {
   background: #f4f5ff;
   color: #506285;
 }
-.notice-right {
-  display: flex;
-  flex-direction: column; /* date on top, image below */
-  align-items: flex-end; /* push both items to the right */
-  gap: 8px; /* space between date & image */
-}
 
-.notice-date {
-  font-size: 14px;
-  color: #2c313a; /* similar to screenshot */
-}
-
-.notice-user {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #ddd; /* light circular border */
-}
 
 /* ===========================
    SEARCH BAR
