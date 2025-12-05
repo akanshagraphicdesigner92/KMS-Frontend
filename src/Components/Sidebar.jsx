@@ -1,10 +1,14 @@
 import React from "react";
 import User from "../Assets/User.svg";
+import HomeIcon from "../Assets/Home.svg";
+import CollectionIcon from "../Assets/collection.svg";
+import MyDocIcon from "../Assets/My docs.svg";
+import ContactGroupIcon from "../Assets/Contact Group.svg";
+
 
 export default function Sidebar() {
   return (
     <aside className="sidebar-container">
-
       {/* PROFILE SECTION */}
       <div className="profile-section text-center">
         <img src={User} alt="profile" className="user-img" />
@@ -15,28 +19,28 @@ export default function Sidebar() {
       {/* MENU GRID */}
       <div className="grid-container menu-box mt-3">
         <div className="menu-item">
-          <i className="pi pi-book"></i>
+          <img src={HomeIcon} alt="Home" className="menu-icon" />
           <span>Home</span>
         </div>
 
-        <div className="menu-item">
-          <i className="pi pi-file"></i>
+      <div className="menu-item">
+          <img src={CollectionIcon} alt="Collection" className="menu-icon" />
           <span>Collection</span>
         </div>
 
         <div className="menu-item">
-          <i className="pi pi-book"></i>
-          <span>My Docs</span>
+          <img src={MyDocIcon} alt="MyDocIcon" className="menu-icon" />
+          <span>MyDoc</span>
         </div>
 
-        <div className="menu-item">
-          <i className="pi pi-book"></i>
-          <span>Contact Group</span>
+         <div className="menu-item">
+          <img src={ContactGroupIcon} alt="ContactGroup" className="menu-icon" />
+          <span>ContactGroup</span>
         </div>
       </div>
 
       {/* ONLY THIS SECTION WILL SCROLL */}
-      
+
       <div className="Counts scroll-counts center-align-items" tabindex="0">
         <div className="status-card blue">
           <i className="pi pi-clock"></i>

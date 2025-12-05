@@ -1,17 +1,11 @@
-/* ===========================
-   GLOBAL
-=========================== */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
   background-image: url("../src/Assets/bg-image.svg");
   height: 100%;
-  overflow: hidden !important; /* PAGE SCROLL BLOCK */
+  overflow: hidden !important;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -31,9 +25,6 @@ code {
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.06);
 }
 
-/* ===========================
-   RIGHT SIDEBAR
-=========================== */
 .right-sidebar {
   top: 0;
   right: 0;
@@ -68,14 +59,12 @@ code {
   color: white;
 }
 
-/* =====
-   LEFT SIDEBAR */
 
 .sidebar-container {
   width: 260px;
   background: #ffffff;
   padding: 20px;
-  height: 75vh;
+  height: 76vh;
   margin-top: 8px;
   border-radius: 20px;
   overflow-y: auto;
@@ -85,6 +74,8 @@ code {
   box-shadow: 0 3px 8px rgba(0, 34, 102, 0.18);
   margin-left: 10px;
 }
+
+
 /* Custom scrollbar */
 .scroll-area::-webkit-scrollbar {
   width: 6px;
@@ -103,15 +94,15 @@ code {
   background: #8a8a8a;
 }
 
-/* ===========================
-   PROFILE SECTION
-=========================== */
+
 .profile-section {
   flex-shrink: 0; /* always visible */
 }
 
 .grid-container {
   flex-shrink: 0; /* always visible */
+  color: #2D3748 ;
+  font-weight: 400;
 }
 
 .user-img {
@@ -122,7 +113,7 @@ code {
 
 .user-name {
   margin: 10px 0 2px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -131,9 +122,6 @@ code {
   font-size: 13px;
 }
 
-/* ===========================
-   NEW MENU DESIGN (EXACT LIKE IMAGE)
-=========================== */
 
 .menu-box {
   margin: 0 auto 25px;
@@ -148,7 +136,7 @@ code {
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Regular small tiles */
+
 .menu-item {
   height: 100px;
   display: flex;
@@ -177,7 +165,7 @@ code {
   background: #f7f9fc;
 }
 
-/* BIG HOME TILE */
+
 .center-tile {
   grid-column: span 2;
   height: 150px;
@@ -197,9 +185,7 @@ code {
   font-weight: 600;
 }
 
-/* ===========================
-   STATUS CARDS
-=========================== */
+
 .status-card {
   display: flex;
   align-items: center;
@@ -216,7 +202,7 @@ code {
   font-size: 1.5rem;
 }
 
-/* colors */
+
 .blue {
   background: #cfeaff;
   color: #1a3799;
@@ -254,9 +240,7 @@ code {
   font-size: 1rem;
 }
 
-/* ===========================
-   NOTICE CARDS (unchanged)
-=========================== */
+
 
 .notice-card {
   background: #ffffff;
@@ -267,12 +251,17 @@ code {
   align-items: flex-start;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   margin-bottom: 16px;
+  
 }
 
 .notice-left {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+}
+
+.left-filters{
+  font-weight: 500;
 }
 
 .file-icon {
@@ -290,7 +279,9 @@ code {
 
 .notice-title {
   margin: 0;
+  font-size: 14px;
   font-weight: 600;
+  
   color: #1e293b;
 }
 
@@ -298,41 +289,8 @@ code {
   margin: 4px 0 8px;
   font-size: 0.85rem;
   color: #6b7280;
+  font-size: 13px;
 }
-
-.notice-right {
-  gap: 4px; /* space between date & user block */
-}
-
-.notice-date {
-  font-size: 14px;
-  color: #2c313a;
-  
-}
-
-.notice-user-wrapper {
-  gap: 3px; /* space between name & image */
-}
-
-.notice-name {
-  font-size: 12px;
-  padding: 1px 4px;
- 
-  border-radius: 4px;
-}
-
-.notice-user {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #ddd;
-  margin-top: 6px;
-}
-
-
-
-
 
 .tags {
   display: flex;
@@ -353,11 +311,26 @@ code {
   background: #f4f5ff;
   color: #506285;
 }
+.notice-right {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end; 
+  gap: 8px;
+}
 
+.notice-date {
+  font-size: 14px;
+  color: #2c313a; 
+}
 
-/* ===========================
-   SEARCH BAR
-=========================== */
+.notice-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd; 
+}
+
 
 .create-btn {
   background: #0d3b8a;
@@ -371,16 +344,14 @@ code {
   gap: 6px;
 }
 
-/* ===========================
-   MAIN content
-=========================== */
+
 .main-content-wrapper {
   height: calc(100vh - 60px);
   overflow-y: auto;
   padding: 20px;
 }
 
-/* LEFT SIDE */
+
 .left-side {
   display: flex;
   align-items: center;
@@ -392,7 +363,7 @@ code {
   object-fit: contain;
 }
 
-/* RIGHT SIDE */
+
 .right-side {
   display: flex;
   align-items: center;
@@ -404,15 +375,15 @@ code {
   object-fit: contain;
 }
 
-/* KMS TEXT */
+
 .kms-text {
   font-size: 16px;
   margin: 0;
   font-weight: 500;
-  margin-left: -10px; /* aligns like screenshot */
+  margin-left: -10px; 
 }
 
-/* ICON GROUP */
+
 .icon-group {
   display: flex;
   align-items: center;
@@ -431,50 +402,46 @@ code {
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent page scroll */
+  height: 100vh; 
+  overflow: hidden; 
 }
-/* ===========================
-   MAIN WRAPPER
-=========================== */
+
 .main-wrapper {
-  flex-grow: 1; /* Take remaining space between Topbar and Footer */
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Prevent content from overflowing */
+  overflow: hidden; 
   padding: 10px 15px;
 }
 
-/* FULL WHITE BOX */
+
 .content-box {
-  flex-grow: 1; /* Fill available space inside main */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   background: #fff;
   border-radius: 12px;
   padding: 10px 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  overflow: hidden; /* Prevent overflow of child elements */
+  overflow: hidden; 
 }
 
 .scroll-area {
-  flex-grow: 1; /* Take remaining space inside content box */
-  overflow-y: auto; /* Only this section scrolls */
+  flex-grow: 1; 
+  overflow-y: auto;
   padding-right: 6px;
 }
 
-/* ===========================
-   SEARCH + FILTERS
-=========================== */
+
 .search-section,
 .filter-section {
-  flex-shrink: 0; /* Fixed height, doesn't grow */
+  flex-shrink: 0;
   background: #fff;
   position: sticky;
   z-index: 10;
 }
 
-/* SEARCH SECTION */
+
 .search-section {
   top: 0;
   border-bottom: 1px solid #eee;
@@ -503,7 +470,9 @@ code {
   padding: 10px 35px !important;
   font-size: 15px !important;
   color: #333 !important;
+  
 }
+
 
 .search-left-icon {
   position: absolute;
@@ -523,7 +492,7 @@ code {
   opacity: 0.7;
 }
 
-/* CREATE BUTTON */
+
 .create-btn {
   all: unset;
   background: #0d3b8a !important;
@@ -537,17 +506,17 @@ code {
   font-size: 15px !important;
 }
 
-/* FILTER SECTION */
+
 .filter-section {
   top: 65px; /* Below search bar */
   border-bottom: 1px solid #eee;
 }
 
-/* SCROLL AREA */
+
 .scroll-area {
   overflow-y: auto;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #b5b5b5 #f1f1f1; /* Firefox thumb + track */
+  scrollbar-width: thin; 
+  scrollbar-color: #b5b5b5 #f1f1f1; 
 }
 
 .scroll-area::-webkit-scrollbar {
@@ -567,31 +536,31 @@ code {
   background: #8a8a8a; /* On hover */
 }
 
-/* Only Status Cards (Counts) Section Scrolls */
+
 .scroll-counts {
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 6px;
+  /* padding-right: 6px; */
 }
-/* Default — scrollbar hidden */
+
 .Counts {
   flex-grow: 1;
   overflow-y: auto;
 }
 
-/* Hide scrollbar (Chrome/Edge/Safari) */
+
 .Counts::-webkit-scrollbar {
   width: 6px;
   background: transparent;
 }
 
-/* Keep thumb hidden until hover */
+
 .Counts::-webkit-scrollbar-thumb {
   background: transparent;
   border-radius: 8px;
 }
 
-/* SHOW scrollbar only on hover */
+
 .Counts:hover::-webkit-scrollbar-thumb {
   background: #a0a0a0; /* visible color */
 }
@@ -611,6 +580,7 @@ code {
   padding: 6px 15px !important;
   cursor: pointer;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .search-icon-wrapper {
@@ -622,31 +592,14 @@ code {
   align-items: center;
   justify-content: center;
 }
-.p-dropdown {
-  background: white !important;
-  border: 1px solid #dcdcdc !important;
-  border-radius: 8px !important;
-  height: 38px !important;
-  box-shadow: none !important;
-}
 
-.p-dropdown-label {
-  padding: 7px 12px !important;
-  font-size: 14px !important;
-}
-
-.p-dropdown-trigger {
-  background: transparent !important;
-}
 
 .quick-links-nav {
-  list-style: none; /* Remove bullets */
-  padding-left: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style: none; 
+  padding-left: 0; 
+  margin: 0; 
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
+
+
+

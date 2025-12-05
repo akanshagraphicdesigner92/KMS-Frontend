@@ -12,11 +12,11 @@ import log_out from "../Assets/log_out.svg";
 
 export default function Topbar() {
   return (
-    <header className="app-header d-flex pt-2">
+    <header className="app-header d-flex ">
       <div className="header-content-area d-md-flex flex-grow-1">
 
         {/* LEFT LOGO */}
-        <div className="d-flex align-items-center justify-content-center">
+        <div className="d-flex align-items-center justify-content-center mt-2">
           <a href="/" aria-label="eOffice logo">
             <img className="img-fluid" alt="eOffice logo" src={logo} />
           </a>
