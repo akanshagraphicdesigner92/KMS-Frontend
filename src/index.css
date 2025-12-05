@@ -4,7 +4,10 @@ body {
   background-image: url("../src/Assets/bg-image.svg");
   height: 100%;
   overflow: hidden !important;
+ 
 }
+
+
 
 
 code {
@@ -64,7 +67,7 @@ code {
   width: 260px;
   background: #ffffff;
   padding: 20px;
-  height: 76vh;
+  height: 100%;
   margin-top: 8px;
   border-radius: 20px;
   overflow-y: auto;
@@ -403,8 +406,11 @@ code {
   display: flex;
   flex-direction: column;
   height: 100vh; 
-  overflow: hidden; 
+  overflow: visible !important;
 }
+
+
+
 
 .main-wrapper {
   flex-grow: 1; 
@@ -602,4 +608,89 @@ code {
 
 
 
+/* ---------------- REAL MOBILE FIX (Figma-correct) ---------------- */
+@media (max-width: 768px) {
+
+  /* 1️⃣ Make sidebar compact */
+  .sidebar-container {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 15px !important;
+    overflow: visible !important;
+    margin: 0 !important;
+  }
+
+  /* Remove side shadow on mobile */
+  .sidebar-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* 2️⃣ Sidebar should NOT push content down too much */
+  .profile-section {
+    margin-bottom: 10px !important;
+  }
+
+  .grid-container {
+    margin-bottom: 10px !important;
+  }
+
+  .Counts {
+    margin-bottom: 10px !important;
+  }
+
+  /* 3️⃣ FIX MAIN CONTENT SHIFTING */
+  .main-container {
+    flex-direction: column !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Remove desktop left space */
+  .main-wrapper {
+    padding: 0 !important;
+  }
+
+  /* 4️⃣ Reduce top header height */
+  .app-header {
+    padding: 8px 12px !important;
+    height: auto !important;
+  }
+
+  /* Hide right-side icons row */
+  .right-head-content {
+    display: none !important;
+  }
+
+  /* 5️⃣ Search section fix */
+  .search-section {
+    top: 0 !important;
+    margin-top: 10px !important;
+  }
+
+  /* Force search + create vertical */
+  .search-section .d-flex {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  .create-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* 6️⃣ Fix search container spacing */
+  .content-box {
+    padding-top: 10px !important;
+  }
+  
+  /* 7️⃣ Hide right sidebar completely */
+  .right-sidebar {
+    display: none !important;
+  }
+
+}
 
