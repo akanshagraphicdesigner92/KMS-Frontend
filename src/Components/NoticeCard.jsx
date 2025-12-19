@@ -55,3 +55,4 @@ export default function NoticeCard({ fileType, name, image, title, desc }) {
     </div>
   );
 }
+
